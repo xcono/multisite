@@ -1,0 +1,9 @@
+
+# Site menu items definition
+entity.site.collection:
+  title: 'Site'
+  route_name: entity.site.collection
+  description: 'List Site (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

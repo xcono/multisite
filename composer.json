@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "name": "xcono/multisite",
+  "type": "drupal-module",
+  "description": "Provides entity to build multisite based on one database and different domains via Drupal UI.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/xcono/multisite",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "support": {
+    "issues": "https://github.com/xcono/multisite/issues",
+    "source": "https://github.com/xcono/multisite"
+  },
+  "require": {}
+}

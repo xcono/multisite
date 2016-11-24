@@ -1,0 +1,22 @@
+services:
+    multisite.manager:
+        class: Drupal\multisite\Manager\MultisiteManager
+        arguments: ['@request_stack', '@multisite.repository']
+
+    multisite.repository:
+        class: Drupal\multisite\Repository\SiteRepository
+        arguments: ['@entity.query']
+
+    # middleware check site entity exist for this host
+    multisite.middleware:
+        class: Drupal\multisite\Middleware\MultisiteMiddleware
+        arguments: ['@multisite.repository']
+        tags:
+            - { name: http_middleware, priority: 250 }
+
+    # choose theme based on site
+    multisite.theme.negotiator:
+        class: Drupal\multisite\Theme\ThemeNegotiator
+        arguments: ['@multisite.manager', '@current_user', '@config.factory', '@entity.manager', '@router.admin_context']
+        tags:
+            - { name: theme_negotiator, priority: 10 }

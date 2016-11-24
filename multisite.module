@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains multisite.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function multisite_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        // Main module help for the multisite module.
+        case 'help.page.multisite':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('Provides helpers to build mutisite based on one database.') . '</p>';
+            return $output;
+
+        default:
+    }
+}

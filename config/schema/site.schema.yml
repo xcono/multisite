@@ -1,0 +1,60 @@
+multisite.site.*:
+  type: config_entity
+  label: 'Site config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    domain:
+      type: string
+      label: 'Domain'
+    company:
+      type: string
+      label: 'Company'
+    company_about:
+      type: text
+      label: 'Company about'
+    phone:
+      type: string
+      label: 'Phone'
+    mail:
+      type: email
+      label: 'E-mail'
+    city:
+      type: string
+      label: 'City'
+    address:
+      type: string
+      label: 'Address'
+    brand:
+      type: string
+      label: 'Brand'
+    slogan:
+      type: string
+      label: 'Slogan'
+    brand_about:
+      type: text
+      label: 'Brand about'
+    theme:
+      type: string
+      label: 'Logo File Id'
+    theme_variant:
+      type: string
+      label: 'Theme Variant'
+    logo:
+      type: int
+      label: 'Logo File Id'
+    promo_image:
+      type: int
+      label: 'Promo File Id'
+    promo_theme:
+      type: int
+      label: 'Promo Theme'
+    vocabulary:
+      type: string
+      label: 'Vocabulary ID'
+    uuid:
+      type: string

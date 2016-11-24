@@ -1,0 +1,7 @@
+name: Multisite
+type: module
+description: Provides helpers to build mutisite based on one database and different domains.
+core: 8.x
+package: Xcono
+dependencies:
+  - taxonomy
